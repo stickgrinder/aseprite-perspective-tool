@@ -10,7 +10,9 @@ function plugin_initialize_prefs(plugin)
             plugin.preferences["storage_type"] = DEFAULT_STORAGE_TYPE
             plugin.preferences["storage_path"] = DEFAULT_STORAGE_PATH
             plugin.preferences["preview_auto_update"] = DEFAULT_PREVIEW_AUTO_UPDATE
-            print("[Perspective Tool] Preferences initialized")
+            if app.isUIAvailable then
+                print("[Perspective Tool] Preferences initialized")
+            end
             break
         end
     end

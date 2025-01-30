@@ -30,7 +30,9 @@ dofile("storage.lua")
 dofile("preferences.lua")
 
 function init(plugin)
-    print("[Perspective Tool] Initializing plugin " .. PLUGIN_VERSION)
+    if app.isUIAvailable then
+        print("[Perspective Tool] Initializing plugin " .. PLUGIN_VERSION)
+    end
     plugin_initialize_prefs(plugin)
 
     local config_dialog = Dialog{title="Perspective Tool"}
